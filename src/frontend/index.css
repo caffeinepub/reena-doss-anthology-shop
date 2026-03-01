@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -156,6 +158,10 @@
   }
   .font-body {
     font-family: "Crimson Pro", Georgia, serif;
+  }
+  .font-handwriting {
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
   }
   .text-ink {
     color: oklch(var(--foreground));

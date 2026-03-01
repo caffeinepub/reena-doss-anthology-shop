@@ -164,7 +164,13 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <p className="font-body text-xs uppercase tracking-[0.35em] text-accent mb-6">
+            <p
+              className="font-handwriting text-2xl sm:text-3xl text-accent mb-6"
+              style={{
+                fontFamily: "'Dancing Script', cursive",
+                fontStyle: "italic",
+              }}
+            >
               ✦ &nbsp; I'll find you in the dark... ✦
             </p>
             {/* Wide-tracked name */}
@@ -174,10 +180,13 @@ export default function HomePage() {
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-8">
               Writer &nbsp;&nbsp; Artist &nbsp;&nbsp; Creative
             </p>
-            <p className="font-body text-xl sm:text-2xl text-foreground/70 leading-relaxed mb-10 max-w-xl mx-auto italic">
-              Poems, prose, lyrics, essays, art, and photographs — a curated
-              anthology of a life examined through language.
-            </p>
+            <div className="flex justify-center mb-10">
+              <img
+                src="/assets/uploads/New-Logo-Reena-Doss-Author-1-1.jpg"
+                alt="Reena Doss Logo"
+                className="w-40 h-40 sm:w-48 sm:h-48 object-contain"
+              />
+            </div>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button
                 asChild
@@ -267,11 +276,13 @@ export default function HomePage() {
       <section className="container mx-auto px-4 sm:px-6 py-16">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="font-body text-xs uppercase tracking-widest text-accent mb-2">
-              ✦ Latest Works
+            <p className="font-body text-xs tracking-widest text-accent mb-2">
+              ✦ Poetry | Letters | Forms | Prose | Lyrics | Photographs |
+              Fiction | Memoirs | YA Fantasy | Children's Literature | Digital
+              Art | Calligraphy | Epigrams ✦
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold text-foreground">
-              From the Anthology
+              Discover Her Voices
             </h2>
           </div>
           <Button
@@ -325,16 +336,13 @@ export default function HomePage() {
       <section className="border-t border-border py-16 bg-card">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-accent mb-3">
-              ✦ &nbsp; Curated
-            </p>
             <h2 className="font-display text-3xl sm:text-4xl font-light tracking-widest text-foreground mb-4 uppercase">
               Words · Art · Creativity
             </h2>
             <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8 italic">
-              Books, prints, apparel, and digital downloads — products crafted
-              from Reena's literary and artistic universe. Each item linked
-              directly to the merchant.
+              Prints, apparel, and digital downloads—products crafted from
+              Reena's literary, artistic, and wild inky seas of imagination.
+              Each item is linked directly to its merchant store.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button

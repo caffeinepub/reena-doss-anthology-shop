@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Fonts ─────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("/assets/fonts/CrimsonPro.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("/assets/fonts/CrimsonPro-Italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  /* ── Light / White Palette — Reena Doss ─────────────────────── */
+  :root {
+    --radius: 0.25rem;
+
+    /* White background */
+    --background: 0.99 0 0;
+    /* Near-black foreground */
+    --foreground: 0.12 0.005 30;
+
+    /* Cards — very light off-white */
+    --card: 0.97 0.003 60;
+    --card-foreground: 0.12 0.005 30;
+
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.12 0.005 30;
+
+    /* Primary — near-black used for high-contrast elements */
+    --primary: 0.12 0.005 30;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary — light gray for secondary sections */
+    --secondary: 0.95 0.003 30;
+    --secondary-foreground: 0.12 0.005 30;
+
+    /* Muted */
+    --muted: 0.94 0.003 30;
+    --muted-foreground: 0.50 0.005 30;
+
+    /* Accent — logo teal */
+    --accent: 0.54 0.115 180;
+    --accent-foreground: 0.99 0 0;
+
+    --destructive: 0.55 0.18 22;
+    --destructive-foreground: 0.99 0 0;
+
+    /* Borders */
+    --border: 0.88 0.003 30;
+    --input: 0.82 0.003 30;
+    --ring: 0.54 0.115 180;
+
+    --chart-1: 0.54 0.115 180;
+    --chart-2: 0.45 0.09 180;
+    --chart-3: 0.55 0.12 280;
+    --chart-4: 0.60 0.10 120;
+    --chart-5: 0.50 0.09 30;
+
+    --sidebar: 0.97 0.003 60;
+    --sidebar-foreground: 0.12 0.005 30;
+    --sidebar-primary: 0.54 0.115 180;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.94 0.003 30;
+    --sidebar-accent-foreground: 0.12 0.005 30;
+    --sidebar-border: 0.88 0.003 30;
+    --sidebar-ring: 0.54 0.115 180;
+  }
+
+  /* Both modes use light palette */
+  .dark {
+    --background: 0.99 0 0;
+    --foreground: 0.12 0.005 30;
+    --card: 0.97 0.003 60;
+    --card-foreground: 0.12 0.005 30;
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.12 0.005 30;
+    --primary: 0.12 0.005 30;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.95 0.003 30;
+    --secondary-foreground: 0.12 0.005 30;
+    --muted: 0.94 0.003 30;
+    --muted-foreground: 0.50 0.005 30;
+    --accent: 0.54 0.115 180;
+    --accent-foreground: 0.99 0 0;
+    --destructive: 0.55 0.18 22;
+    --destructive-foreground: 0.99 0 0;
+    --border: 0.88 0.003 30;
+    --input: 0.82 0.003 30;
+    --ring: 0.54 0.115 180;
+    --chart-1: 0.54 0.115 180;
+    --chart-2: 0.45 0.09 180;
+    --chart-3: 0.55 0.12 280;
+    --chart-4: 0.60 0.10 120;
+    --chart-5: 0.50 0.09 30;
+    --sidebar: 0.97 0.003 60;
+    --sidebar-foreground: 0.12 0.005 30;
+    --sidebar-primary: 0.54 0.115 180;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.94 0.003 30;
+    --sidebar-accent-foreground: 0.12 0.005 30;
+    --sidebar-border: 0.88 0.003 30;
+    --sidebar-ring: 0.54 0.115 180;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Crimson Pro", Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Fraunces", "Georgia", serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Fraunces", Georgia, serif;
+  }
+  .font-body {
+    font-family: "Crimson Pro", Georgia, serif;
+  }
+  .text-ink {
+    color: oklch(var(--foreground));
+  }
+
+  /* Wide-tracked display name */
+  .tracking-site-name {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .prose-literary {
+    line-height: 1.9;
+    font-size: 1.125rem;
+    font-family: "Crimson Pro", Georgia, serif;
+  }
+
+  /* Very subtle grain — works on white */
+  .hero-texture {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  .ornamental-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: oklch(var(--muted-foreground));
+  }
+  .ornamental-divider::before,
+  .ornamental-divider::after {
+    content: "✦";
+    color: oklch(var(--accent));
+    opacity: 0.7;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px oklch(0.12 0.005 30 / 0.08);
+  }
+
+  /* Nav link underline effect */
+  .nav-link {
+    @apply relative font-body text-sm transition-colors duration-200;
+    letter-spacing: 0.06em;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: oklch(var(--accent));
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Teal accent text (logo teal) */
+  .text-gold {
+    color: oklch(var(--accent));
+  }
+
+  /* Hero light background with subtle teal geometric accent */
+  .bg-hero-light {
+    background:
+      linear-gradient(135deg, oklch(0.97 0.003 60) 0%, oklch(0.99 0 0) 60%, oklch(0.96 0.01 180 / 0.15) 100%);
+  }
+
+  /* Category badge variants — light-mode appropriate */
+  .badge-poems {
+    background: oklch(0.94 0.04 10 / 0.5);
+    color: oklch(0.35 0.08 15);
+    border-color: oklch(0.75 0.06 12 / 0.6);
+  }
+  .badge-quotes {
+    background: oklch(0.94 0.04 70 / 0.5);
+    color: oklch(0.35 0.08 70);
+    border-color: oklch(0.75 0.06 70 / 0.6);
+  }
+  .badge-art {
+    background: oklch(0.93 0.04 290 / 0.5);
+    color: oklch(0.30 0.07 290);
+    border-color: oklch(0.72 0.06 290 / 0.6);
+  }
+  .badge-lyrics {
+    background: oklch(0.92 0.04 220 / 0.5);
+    color: oklch(0.28 0.07 220);
+    border-color: oklch(0.70 0.05 220 / 0.6);
+  }
+  .badge-essays {
+    background: oklch(0.93 0.05 160 / 0.5);
+    color: oklch(0.28 0.09 160);
+    border-color: oklch(0.68 0.07 160 / 0.6);
+  }
+  .badge-prose {
+    background: oklch(0.94 0.04 40 / 0.5);
+    color: oklch(0.32 0.07 40);
+    border-color: oklch(0.73 0.05 40 / 0.6);
+  }
+  .badge-photographs {
+    background: oklch(0.93 0.04 245 / 0.5);
+    color: oklch(0.28 0.07 245);
+    border-color: oklch(0.70 0.05 245 / 0.6);
+  }
+  .badge-letters {
+    background: oklch(0.94 0.04 330 / 0.5);
+    color: oklch(0.30 0.08 330);
+    border-color: oklch(0.72 0.06 330 / 0.6);
+  }
+}
